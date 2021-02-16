@@ -1,28 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans+KR:wght@400;500&display=swap');
+
 :root {
-  font-family: 'Staatliches', cursive;
-  font-family: 'Covered By Your Grace', cursive;
-  font-family: 'Open Sans', sans-serif;
+  --font_titles: 'Montserrat', sans-serif; /*400,500,600*/
+  --font_p: 'Noto Sans KR', sans-serif; /*400,500*/
+  --shadow_color: #333333;
 }
 html{
   font-size: 62.5%;
 }
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font_p);
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-h1, h2, h3 {
-  font-family: 'Staatliches', cursive;
-}
-h1 {
-  font-size: 3.4rem;
-  display: block;
-}
-h2 {font-size: 2.4rem}
-h3 {font-size: 3rem}
-ul{list-style: none}
 label{
   font-size: 1.2rem;
   text-align: left;
@@ -31,14 +23,30 @@ label{
   margin-bottom: .5rem;
   letter-spacing: 2px;
 }
+ul{list-style: none;}
+h3{font-family: var(--font_titles); font-weight: 600; font-size: 1.8rem;}
+
 /*Navbar */
+.header{
+  background-image: url('/assets/img/back.jpg');
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
 .nav-menu{
   background: rgba(0, 0, 0, 0.8);
 }
 .nav-menu li a{
   color: white;
-  font-family: 'Staatliches', cursive;
-  font-size: 1.5rem;
+  font-family: var(--font_titles);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-right: 0;
+  padding-left: 0;
+}
+.nav-menu li a:hover{
+  background: rgba(0, 0, 0, 0.3);
 }
 .logo-container img{
   width: 300px;
@@ -49,19 +57,29 @@ label{
 nav > ul > li > ul{
   display: none;
   position: absolute;
-  width: 100%;
-  left: 0;
-  z-index: 2;
+  z-index: 20;
   color: white;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, .7);
 }
 nav > ul > li:hover > ul{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: block;
 }
 
-/* Slide*/
+nav > ul > li:hover > ul > li{
+  border: 1px solid var(--shadow_color);
+  padding: .5rem;
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
+nav > ul > li:hover ul > li > a{
+  color: white;
+}
+nav > ul > li:hover ul > li:hover {
+  box-shadow: 0 0 6px var(--shadow_color) inset;
+}
+
+
+/* Slider*/
 .carousel-item {
   width: 100%;
   height: 80vh;
@@ -108,10 +126,13 @@ nav > ul > li:hover > ul{
 .slider-container h1 {
   font-size: 7rem;
   color: white;
+  font-family: var(--font_titles);
+  font-weight: 600;
   text-shadow: 2px 2px 5px black;
+  margin-bottom: 2rem;
 }
 .slider-container em {
-  font-family: 'Covered By Your Grace', cursive;
+  font-family: var(--font_p);
   font-size: 3.5rem;
   order: -1;
   text-shadow: 2px 2px 5px black;
@@ -122,20 +143,23 @@ nav > ul > li:hover > ul{
   background: rgba(255, 255, 255, .9);
   padding: .8rem;
   border-radius: 10px;
-  font-weight: 700;
+  font-family: var(--font_titles);
+  font-weight: 600;
   outline: none;
   transition: all .5s;
-  color: #333;
+  color: var(--shadow_color);
+  border: 1px solid var(--shadow_color);
 }
 .slide_button:hover{
-  box-shadow: 2px 2px 5px #333, -2px -2px 5px #333;
+  box-shadow: 2px 2px 5px var(--shadow_color), -2px -2px 5px var(--shadow_color);
   text-decoration: none;
   transform: scale(1.1);
+  color: var(--shadow_color);
 }
 .slide_button:active{
-  box-shadow: 2px 2px 5px #333 inset, -2px -2px 5px #333 inset;
+  box-shadow: 2px 2px 5px var(--shadow_color) inset, -2px -2px 5px var(--shadow_color) inset;
   transform: scale(.9);
-  color: #333;
+  color: var(--shadow_color);
 }
 @media (max-width:767px) {
   .slider-container {
@@ -153,10 +177,10 @@ nav > ul > li:hover > ul{
 
 /* Text intro and Guides*/
 .text-intro {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 2;
   font-style: italic;
-  box-shadow: 2px 2px 5px #333, -2px -2px 5px #333;
+  box-shadow: 2px 2px 5px var(--shadow_color), -2px -2px 5px var(--shadow_color);
   padding: .5rem;
   border-radius: 5px;
 }
@@ -171,7 +195,7 @@ nav > ul > li:hover > ul{
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  box-shadow: 2px 2px 5px #333, -2px -2px 5px #333;
+  box-shadow: 2px 2px 5px var(--shadow_color), -2px -2px 5px var(--shadow_color);
 }
 
 /*Disccount*/
@@ -202,23 +226,127 @@ nav > ul > li:hover > ul{
   color: white;
   line-height: 2;
 }
+.discount h3 {
+  font-size: 2rem;
+}
 .discount p {
-  font-family: 'Staatliches', cursive;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 .discount .title {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
+  font-family: var(--font_titles);
+  font-weight: 600;
+}
+.discount .date {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 .discount .price {
-  color: #15B9D5;
+  color: white;
   font-size: 3rem;
 }
 
 /*Footer*/
 footer .nav a,
 .copyright {
-  font-family: 'Staatliches', cursive;
-  font-size: 1.5rem;
+  font-family: var(--font_titles);
+  font-weight: 600;
+  font-size: 1.1rem;
   color: black;
-  padding: 0 1rem
+  padding: 0 1rem;
+}
+
+footer{
+  background: whitesmoke;
+}
+
+.nav-menu-footer ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu-footer li {
+  text-align: center;
+  padding: 0;
+}
+
+.nav-menu-footer li a{
+  text-decoration: none;
+  color: var(--shadow_color);
+  font-family: var(--font_titles);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: .5rem 0;
+  width: 100%;
+  display: block;
+  border-bottom: 2px solid whitesmoke;
+} 
+.nav-menu-footer li a:hover{
+  border-bottom: 2px solid var(--shadow_color);
+  box-sizing: border-box;
+}
+
+@media (max-width:320px ){
+  .nav-menu-footer li{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  } 
+}
+
+/* Testimonials*/
+
+/*Form*/
+.btn-success {
+  background-color: var(--shadow_color);
+  border-color: var(--shadow_color);
+  padding: .8rem 0;
+  text-transform: uppercase;
+  border-radius: .8rem;
+}
+.btn-success:hover {
+  background-color: rgba(51, 51, 51, .9);
+  border-color: rgba(51, 51, 51, 1);
+}
+
+i {
+  color: black;
+  font-size: 1.4rem;
+  margin: 0 .5rem;
+}
+
+.blockquote-footer {
+  text-align: right;
+  color: #717070;
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: .8rem;
+  background-color: white;
+  letter-spacing: .5rem;
+}
+.card-body p{
+  font-size: 1.1rem;
+  font-weight: normal;
+  font-family: var(--font_p)
+  /* text-align: left; */
+}
+
+.about-img{
+  width: 300px;
+  border-radius: 20px;
+}
+
+
+.icon{
+  width: 100%;
+  font-size: 3rem;
+  color: dodgerblue;
+  text-align: center;
 }

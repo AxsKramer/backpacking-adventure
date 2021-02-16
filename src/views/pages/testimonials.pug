@@ -1,10 +1,30 @@
-.row.testimonials
-    each testimonial in testimonials
-      .col-md-6.col-lg-4.mb-4
-        .card
-          .card-body 
-            blockquote.blockquote
-            //-   p.mb-0
-            //-     | #{testimonial.message}
-            //- footer.blockquote-footer
-            //-   | #{testimonial.name}
+extends ../layout/layout
+
+block content
+  main.container.mt-5
+    h1.text-center.mt-5 
+      h3.text-center.mb-5 Traveler experiences
+      include ../layout/testimonial_block
+      .row
+        .col-md-12
+          h3.d-block.w-100.text-center.mt-3 Add Testimonial
+          if(errors)
+            each error in errors
+              p.alert.alert-danger.text-center.col.py-0 #{error.message}
+        .row.justify-content-center.col
+          .col-md-8
+            form.mt-3.mb-5(action="/travels/testimonials" method="POST" id="form")
+              .form-group
+                label.text-uppercase.font-weight-bold.text-muted(for="name") Name
+                input#name(type="text", value=name placeholder="Your name", name="name", class="form-control" autocomplete="off" required )
+              .form-group
+                label.text-uppercase.font-weight-bold.text-muted(for="trip") Trip
+                input#trip(type="text", value=trip placeholder="Your trip", name="trip", class="form-control" autocomplete="off" required)
+              .form-group
+                label.text-uppercase.font-weight-bold.text-muted(for="email") Email
+                input#email(type="text", value=email placeholder="Your email", name="email", class="form-control" autocomplete="off" required)
+              .form-group
+                label.text-uppercase.font-weight-bold.text-muted(for="message") Message
+                textarea#message(name="message", rows="5" class="form-control" maxlength="150" autocomplete="off" required placeholder="Your testimony") #{message}
+              input.btn.btn-success.btn-block(type="submit")
+
