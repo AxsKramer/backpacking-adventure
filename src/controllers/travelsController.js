@@ -1,7 +1,7 @@
 
 
 const getTop5Travels = (req, res) => {
-
+  res.render('pages/home');
 }
 const getNationalTravels = (req, res) => {
 

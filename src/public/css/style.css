@@ -1,0 +1,224 @@
+:root {
+  font-family: 'Staatliches', cursive;
+  font-family: 'Covered By Your Grace', cursive;
+  font-family: 'Open Sans', sans-serif;
+}
+html{
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1, h2, h3 {
+  font-family: 'Staatliches', cursive;
+}
+h1 {
+  font-size: 3.4rem;
+  display: block;
+}
+h2 {font-size: 2.4rem}
+h3 {font-size: 3rem}
+ul{list-style: none}
+label{
+  font-size: 1.2rem;
+  text-align: left;
+  display: block;
+  margin-top: 1.2rem;
+  margin-bottom: .5rem;
+  letter-spacing: 2px;
+}
+/*Navbar */
+.nav-menu{
+  background: rgba(0, 0, 0, 0.8);
+}
+.nav-menu li a{
+  color: white;
+  font-family: 'Staatliches', cursive;
+  font-size: 1.5rem;
+}
+.logo-container img{
+  width: 300px;
+}
+.travels{
+  position: relative;
+}
+nav > ul > li > ul{
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 2;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+nav > ul > li:hover > ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Slide*/
+.carousel-item {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  position: relative;
+}
+.item1 {
+  background: url(../assets/img/image1.jpg); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.item2 {
+  background: url(../assets/img/paris.jpg); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.item3 {
+  background: url(../assets/img/india.jpg); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.item4 {
+  background: url(../assets/img/chichen.jpg); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.item5 {
+  background: url(../assets/img/norway.jpg); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 0;
+}
+.slider-container h1 {
+  font-size: 7rem;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+.slider-container em {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 3.5rem;
+  order: -1;
+  text-shadow: 2px 2px 5px black;
+  color: rgba(255, 255, 255, .5);
+}
+.slide_button{
+  font-size: 1.4rem;
+  background: rgba(255, 255, 255, .9);
+  padding: .8rem;
+  border-radius: 10px;
+  font-weight: 700;
+  outline: none;
+  transition: all .5s;
+  color: #333;
+}
+.slide_button:hover{
+  box-shadow: 2px 2px 5px #333, -2px -2px 5px #333;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+.slide_button:active{
+  box-shadow: 2px 2px 5px #333 inset, -2px -2px 5px #333 inset;
+  transform: scale(.9);
+  color: #333;
+}
+@media (max-width:767px) {
+  .slider-container {
+    width: 100%;
+    height: 100%;
+    padding: 40% 2rem 0 2rem;
+  }
+  .slider-container em {
+    font-size: 1.5rem;
+  }
+  .slider-container h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Text intro and Guides*/
+.text-intro {
+  font-size: 1.2rem;
+  line-height: 2;
+  font-style: italic;
+  box-shadow: 2px 2px 5px #333, -2px -2px 5px #333;
+  padding: .5rem;
+  border-radius: 5px;
+}
+.text-writter{
+  display: block;
+  text-align: end;
+}
+.guideN p{
+  font-size: 1.2rem;
+}
+.guide{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px #333, -2px -2px 5px #333;
+}
+
+/*Disccount*/
+.discount {
+  height: 400px;
+  background-image: linear-gradient( rgba(0, 0, 0, .5) 0%,  rgba(0, 0, 0, .5) 100%),  url(../assets/img/tulum.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width:768px) {
+  .discount {
+    height: 400px;
+    background-image:  linear-gradient(
+      to right, 
+      rgba(0, 0, 0, .5) 0%, 
+      rgba(0, 0, 0, .5) 50%, 
+      transparent 50%, 
+      transparent 100%
+    ), url(../assets/img/tulum.jpg);
+  }
+}
+.discount .contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  color: white;
+  line-height: 2;
+}
+.discount p {
+  font-family: 'Staatliches', cursive;
+  font-size: 1.5rem;
+}
+.discount .title {
+  font-size: 2.6rem;
+}
+.discount .price {
+  color: #15B9D5;
+  font-size: 3rem;
+}
+
+/*Footer*/
+footer .nav a,
+.copyright {
+  font-family: 'Staatliches', cursive;
+  font-size: 1.5rem;
+  color: black;
+  padding: 0 1rem
+}
