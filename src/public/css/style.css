@@ -379,10 +379,10 @@ i {
 
 @media (min-width:766px) {
   h3{
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
   .nav-menu li a{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: 1rem;
   }
   .slider-container {
@@ -402,7 +402,7 @@ i {
     padding: 0 1rem;
   }
   .guideN p{
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .guide{
     width: 80px;
@@ -412,13 +412,13 @@ i {
     margin: 0 1rem;
   }
   .card-body p{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
   .networks{
     top: 2rem;
   }
   .social{
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
   .discount {
     height: 400px;
@@ -457,7 +457,7 @@ i {
   }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1250px){
   .header{
     background-image: url('/assets/img/back.jpg');
     width: 100%;
@@ -466,6 +466,9 @@ i {
     height: 40rem;
   }
   .logo-container img{
-    width: 500px;
+    width: 400px;
+  }
+  .slider-container {
+    padding: 10% 2rem 0 2rem; 
   }
 }
