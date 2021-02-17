@@ -87,7 +87,7 @@ nav > ul > li:hover ul > li:hover {
   position: relative;
 }
 .item1 {
-  background: url(../assets/img/image1.jpg); 
+  background: url(../assets/img/mexico.jpg); 
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
@@ -349,4 +349,8 @@ i {
   font-size: 3rem;
   color: dodgerblue;
   text-align: center;
+}
+
+.card-img-top{
+  height: 160px ;
 }

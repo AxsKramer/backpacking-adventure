@@ -1,7 +1,11 @@
 .row.testimonials
     each testimonial in testimonials
-      .col-md-6.col-lg-4.mb-4
+      .col-md-6.col-lg-6.mb-4
         .card
+          .card-header
+            i.fas.fa-map-marker-alt
+              strong
+                |   #{testimonial.trip.toUpperCase()} 
           .card-body 
             p.mb-0.card-text
               i.fas.fa-quote-left

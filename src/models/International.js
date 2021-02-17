@@ -1,7 +1,7 @@
-const Sequelize, {DataTypes} = require('sequelize');
+const {Sequelize, DataTypes} = require('sequelize');
 const db = require('../config/db');
 
-const International = db.define('International', {
+const International = db.define('International_trip', {
   trip_name: {
     type: DataTypes.STRING,
     allowNull: false
@@ -27,11 +27,11 @@ const International = db.define('International', {
     allowNull: false
   },
   available: {
-    type: DataTypes.BOOLEAN,
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   image: {
-    type: DataTypes.STRING(120),
+    type: DataTypes.STRING,
     allowNull: false
   },
   description: {

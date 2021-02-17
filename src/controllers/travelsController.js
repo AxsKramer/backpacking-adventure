@@ -1,4 +1,6 @@
 const Testimonial = require("../models/Testimonial");
+const National = require('../models/National');
+const International = require('../models/International');
 
 
 const getTop5Travels = async  (req, res) => {
@@ -10,32 +12,58 @@ const getTop5Travels = async  (req, res) => {
     console.log(error.message);
   }
 }
-const getNationalTravels = (req, res) => {
-
+const getNationalTravels = async (req, res) => {
+  try{
+    const travels = await National.findAll() || [];
+    res.render('pages/travels', {page: 'National', travels}); 
+  }
+  catch(error){
+    console.log(error);
+  }
 }
-const getInternationalTravels = (req, res) => {
-
+const getInternationalTravels =  async (req, res) => {
+  try{
+    const travels = await International.findAll() || [];
+    res.render('pages/travels', {page: 'International', travels}); 
+  }
+  catch(error){
+    console.log(error);
+  }
 }
-const getNationalTravelById = (req, res) => {
-
+const getNationalTravelById = async (req, res) => {
+  const id = req.parms.travelId;
+  try{
+    const travels = await National.findAll({where: {id: id}});
+    res.render('pages/travels', {page: 'National', travels}); 
+  }
+  catch(error){
+    console.log(error);
+  }
 }
-const getInternationalTravelById = (req, res) => {
-  res.render('pages/aboutus',{page: 'Testimonials', testimonials});
+const getInternationalTravelById = async (req, res) => {
+  const id = req.parms.travelId;
+  try{
+    const travels = await International.findAll({where: {id: id}});
+    res.render('pages/travels', {page: 'International', travels}); 
+  }
+  catch(error){
+    console.log(error);
+  }
 }
-
-const aboutPage = (req, res) => {
-  res.render('pages/aboutUs',{page: 'About Us'});
-}
-
 
 const getTestimonials = async (req, res) => {
   try {
-    const testimonials = await Testimonial.findAll();
+    const testimonials = await Testimonial.findAll() || 'No testimonials';
     res.render('pages/testimonials',{page: 'Testimonials', testimonials});
   } catch (error) {
     console.log(error);
   }
 } 
+
+const aboutPage = (req, res) => {
+  res.render('pages/aboutUs',{page: 'About Us'});
+}
+
 
 
 
