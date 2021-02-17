@@ -22,9 +22,9 @@ block content
                 input#trip(type="text", value=trip placeholder="Your trip", name="trip", class="form-control" autocomplete="off" required)
               .form-group
                 label.text-uppercase.font-weight-bold.text-muted(for="email") Email
-                input#email(type="text", value=email placeholder="Your email", name="email", class="form-control" autocomplete="off" required)
+                input#email(type="text", value=email placeholder="Your email", name="email", class="form-control" autocomplete="off" )
               .form-group
                 label.text-uppercase.font-weight-bold.text-muted(for="message") Message
-                textarea#message(name="message", rows="5" class="form-control" maxlength="150" autocomplete="off" required placeholder="Your testimony") #{message}
+                textarea.textarea#message(name="message", rows="5" class="form-control" maxlength="150" autocomplete="off" required placeholder="Your testimony") #{message}
               input.btn.btn-success.btn-block(type="submit")
 
