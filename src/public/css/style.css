@@ -7,6 +7,7 @@
 }
 html{
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 body {
   font-family: var(--font_p);
@@ -29,14 +30,11 @@ h3{font-family: var(--font_titles); font-weight: 600; font-size: 1.8rem; text-tr
 /*Navbar */
 .header{
   background-image: url('/assets/img/back.jpg');
-  width: 100%;
   background-position: center;
   background-size: cover;
-
-
 }
 .nav-menu{
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
 }
 .nav-menu li a{
   color: white;
@@ -48,10 +46,12 @@ h3{font-family: var(--font_titles); font-weight: 600; font-size: 1.8rem; text-tr
   padding-left: 0;
 }
 .nav-menu li a:hover{
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 1);
 }
 .logo-container img{
   width: 300px;
+  opacity: 0;
+  animation: logoFadeIn 2s .5s ease forwards;
 }
 .travels{
   position: relative;
@@ -61,7 +61,7 @@ nav > ul > li > ul{
   position: absolute;
   z-index: 40;
   color: white;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 1);
 }
 nav > ul > li:hover > ul{
   display: block;
@@ -82,10 +82,13 @@ nav > ul > li:hover ul > li:hover {
 
 /* Slider*/
 .carousel-item {
-  width: 100%;
   height: 80vh;
   min-height: 600px;
   position: relative;
+}
+.slide-container{
+  margin: 0 auto;
+  padding: 0;
 }
 .item1 {
   background: url(../assets/img/mexico.jpg); 
@@ -168,11 +171,10 @@ nav > ul > li:hover ul > li:hover {
 
 /* Text intro and Guides*/
 .text-intro {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 2;
   font-style: italic;
   box-shadow: 2px 2px 5px var(--shadow_color), -2px -2px 5px var(--shadow_color);
-  padding: .5rem;
   border-radius: 5px;
 }
 .text-writter{
@@ -181,11 +183,11 @@ nav > ul > li:hover ul > li:hover {
   color:#3e3e3e;
 }
 .guideN p{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .guide{
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   box-shadow: 2px 2px 5px var(--shadow_color), -2px -2px 5px var(--shadow_color);
 }
@@ -328,6 +330,7 @@ i {
   font-size: 3rem;
   color: dodgerblue;
   text-align: center;
+  animation: logoFadeIn 2s .5s ease forwards;
 }
 .card-img-top{
   height: 160px ;
@@ -356,18 +359,26 @@ i {
 .fa-envelope {
   color: red;
   background: white;
+  opacity: 0;
+  animation: logoFadeIn 2s .5s ease forwards;
 }
 .fa-whatsapp {
   color: white;
   background: green;
+  opacity: 0;
+  animation: logoFadeIn 2s .5s ease forwards;
 }
 .fa-facebook {
   color: blue;
   background: white;
+  opacity: 0;
+  animation: logoFadeIn 2s .5s ease forwards;
 }
 .fa-instagram {
   color: white;
   background: purple;
+  opacity: 0;
+  animation: logoFadeIn 2s .5s ease forwards;
 }
 .social-section{
   width: 100%;
@@ -376,8 +387,18 @@ i {
   border-radius: 3px;
 }
 
+@keyframes logoFadeIn{
+  from{
+    opacity: 0;
+    transform: scale(0);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-@media (min-width:766px) {
+@media only screen and (min-width:766px) {
   h3{
     font-size: 2.6rem;
   }
@@ -398,15 +419,15 @@ i {
     font-size: 2rem;
   }
   .text-intro {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 0 1rem;
   }
   .guideN p{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .guide{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
   i {
     margin: 0 1rem;
@@ -457,10 +478,9 @@ i {
   }
 }
 
-@media (min-width: 1250px){
+@media only screen and (min-width: 766px){
   .header{
     background-image: url('/assets/img/back.jpg');
-    width: 100%;
     background-position: center ;
     background-size: cover;
     height: 40rem;

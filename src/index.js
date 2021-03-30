@@ -10,7 +10,7 @@ const app = express();
 
 db.authenticate()
   .then(() => console.log('Database connected'))
-  .catch(() => console.log(error.message));
+  .catch((error) => console.log(error.message));
 
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: true}));
