@@ -49,7 +49,8 @@ h3{font-family: var(--font_titles); font-weight: 600; font-size: 1.8rem; text-tr
   background: rgba(0, 0, 0, 1);
 }
 .logo-container img{
-  width: 300px;
+  width: 250px;
+  height: 250px;
   opacity: 0;
   animation: logoFadeIn 2s .5s ease forwards;
 }
@@ -395,100 +396,5 @@ i {
   to{
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@media only screen and (min-width:766px) {
-  h3{
-    font-size: 2.6rem;
-  }
-  .nav-menu li a{
-    font-size: 1.6rem;
-    padding: 1rem;
-  }
-  .slider-container {
-    padding: 20% 2rem 0 2rem; 
-  }
-  .slider-container em {
-    font-size: 3.5rem;
-  }
-  .slider-container h1 {
-    font-size: 7rem;
-  }
-  .slide_button{
-    font-size: 2rem;
-  }
-  .text-intro {
-    font-size: 1.5rem;
-    padding: 0 1rem;
-  }
-  .guideN p{
-    font-size: 1.5rem;
-  }
-  .guide{
-    width: 60px;
-    height: 60px;
-  }
-  i {
-    margin: 0 1rem;
-  }
-  .card-body p{
-    font-size: 1.7rem;
-  }
-  .networks{
-    top: 2rem;
-  }
-  .social{
-    font-size: 3rem;
-  }
-  .discount {
-    height: 400px;
-    background-image:  linear-gradient(
-      to right, 
-      rgba(0, 0, 0, .5) 0%, 
-      rgba(0, 0, 0, .5) 50%, 
-      transparent 50%, 
-      transparent 100%
-    ), url(../assets/img/tulum.jpg);
-  }
-  .social-section{
-    height: 8rem;
-  }
-  .nav-menu-footer li a,
-  .coypright {
-    font-size: 1.8rem;
-  }
-  .icon{
-    font-size: 5rem;
-  }
-  .about-img{
-    width: 300px;
-    height: 220px;
-    border-radius: 20px;
-  }
-  .p_about, .p_about-details,label, input::placeholder, textarea::placeholder{
-    font-size: 1.5rem;
-  }
-  input[type="text"]{
-    padding: 1rem 1rem;
-    font-size: 1.5rem;
-  }
-  .textarea {
-    font-size: 1.5rem;
-  }
-}
-
-@media only screen and (min-width: 766px){
-  .header{
-    background-image: url('/assets/img/back.jpg');
-    background-position: center ;
-    background-size: cover;
-    height: 40rem;
-  }
-  .logo-container img{
-    width: 400px;
-  }
-  .slider-container {
-    padding: 10% 2rem 0 2rem; 
   }
 }
