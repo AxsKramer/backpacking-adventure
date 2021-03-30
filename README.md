@@ -10,10 +10,10 @@
 - Download or clone the project 
 - Install dependencies
   - `$ npm install` 
-- You should do the database configuration.
+- You should make the database configuration in MySQL on port 3306.
 - Run the project in development way with:
   - `$ npm run dev`
-- > "Server runs at", [here](http://localhost:4000/).
+- > "Server runs at http://localhost:4000 "
 
 #### Project details
 - Javascript on the server side with Node.js.
