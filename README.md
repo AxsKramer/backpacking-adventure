@@ -1,6 +1,6 @@
 # Backpacking Adventure
 
-### Mexico travel agency, we travel to amazing places in the country and in the world.
+### Mexican travel agency, we travel to amazing places in the country and the world.
 > "Website", [demo here](https://backpacking-adventure.herokuapp.com/).
 
 <img src='./src/public/assets/img/website.png' width=400px>
